@@ -1,24 +1,28 @@
 {
-  "name": "fill-up-for-me",
-  "version": "0.0.0",
-  "description": "Automate script to fill up internal timesheet platform",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo tests not configured"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/samuelsilvadev/fill-up-for-me.git"
-  },
-  "keywords": [
-    "script",
-    "timesheet",
-    "Aubay"
-  ],
-  "author": "Samuel Silva",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/samuelsilvadev/fill-up-for-me/issues"
-  },
-  "homepage": "https://github.com/samuelsilvadev/fill-up-for-me#readme"
+	"name": "fill-up-for-me",
+	"version": "0.0.0",
+	"description": "Automate script to fill up internal timesheet platform",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo tests not configured",
+		"prettier": "prettier --write 'src/**/*.js'"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/samuelsilvadev/fill-up-for-me.git"
+	},
+	"keywords": [
+		"script",
+		"timesheet",
+		"Aubay"
+	],
+	"author": "Samuel Silva",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/samuelsilvadev/fill-up-for-me/issues"
+	},
+	"homepage": "https://github.com/samuelsilvadev/fill-up-for-me#readme",
+	"devDependencies": {
+		"prettier": "^2.0.5"
+	}
 }
