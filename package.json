@@ -6,7 +6,8 @@
 	"scripts": {
 		"test": "echo tests not configured",
 		"prettier": "prettier --write 'src/**/*.js'",
-		"lint": "eslint 'src/**/*.js' --fix"
+		"lint": "eslint 'src/**/*.js' --fix",
+		"start": "nodemon src/index.js"
 	},
 	"repository": {
 		"type": "git",
@@ -27,6 +28,11 @@
 		"eslint": "^7.2.0",
 		"eslint-config-prettier": "^6.11.0",
 		"eslint-plugin-prettier": "^3.1.4",
+		"nodemon": "^2.0.4",
 		"prettier": "^2.0.5"
+	},
+	"dependencies": {
+		"dotenv": "^8.2.0",
+		"puppeteer": "^4.0.0"
 	}
 }
