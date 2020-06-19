@@ -1,5 +1,5 @@
 {
-	"name": "fill-up-for-me",
+	"name": "fill-aubay-timesheet",
 	"version": "0.0.0",
 	"description": "Automate script to fill up internal timesheet platform",
 	"main": "index.js",
