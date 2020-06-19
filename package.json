@@ -32,6 +32,7 @@
 		"prettier": "^2.0.5"
 	},
 	"dependencies": {
+		"chalk": "^4.1.0",
 		"puppeteer": "^4.0.0",
 		"yargs": "^15.3.1"
 	}
