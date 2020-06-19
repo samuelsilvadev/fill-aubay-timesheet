@@ -4,7 +4,7 @@ Lightweight CLI for fill up a specific timesheet from my current company.
 
 ```shell
 
-npx fill-my-timesheet --user=your-user --pass=your-pass
+npx fill-aubay-timesheet --user=your-user --pass=your-pass
 
 ```
 
@@ -12,7 +12,7 @@ or you can install globally on your machine
 
 ```shell
 
-npm i -g fill-my-timesheet
+npm i -g fill-aubay-timesheet
 
 ```
 
@@ -20,7 +20,7 @@ and then run
 
 ```shell
 
-fill-my-timesheet --user=your-user --pass=your-pass
+fill-aubay-timesheet --user=your-user --pass=your-pass
 
 ```
 
