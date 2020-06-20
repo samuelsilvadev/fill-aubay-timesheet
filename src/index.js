@@ -12,7 +12,7 @@ const logger = require('./utils/logger');
 
 	if (!user || !pass) {
 		logger().error(
-			'\nUsername and password are required, maybe you forget to pass them, like `--user=` or `--pass=` ?'
+			'\nUsername and password are required, Did you forget to pass them?, like `--user=` or `--pass=`'
 		);
 
 		process.exit(0);
