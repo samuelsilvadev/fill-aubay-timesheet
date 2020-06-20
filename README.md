@@ -32,11 +32,31 @@ fill-aubay-timesheet --user=your-user --pass=your-pass
 
 ```
 
+with custom hour period
+
+```shell
+
+fill-aubay-timesheet --user=your-user --pass=your-pass --hours-per-day=9
+
+```
+
+for testing purposes
+
+```shell
+
+fill-aubay-timesheet --user=your-user --pass=your-pass --testing=true
+
+```
+
 ### Flags
 
 -   `--user`: your personal username to sign in on Aubay's application.
 -   `--pass`: your personal password to sign in on Aubay's application.
 -   `--hours-per-day`: if you want to change the default value, which is _8_.
+-   `--testing`: use this flag when you want to open the browser and see the
+    steps happening, also, it will skip some steps, specifically the following:
+    [`saveTimesheet`, `reOpenTimesheet`, `submitTimesheet`]. This flag was added
+    to help us test the application without create holes in it 🙈
 
 ## License
 

@@ -1,5 +1,3 @@
-const DEFAULT_HOUR_PERIOD_PER_DAY = 8;
-
 const HOUR_CELL_IDENTIFIER = 'input.cellDataTextBox';
 
 module.exports = async function insertHours(context) {
@@ -12,7 +10,7 @@ module.exports = async function insertHours(context) {
 		(cells, hourPeriod) => {
 			cells.forEach((cell) => (cell.value = hourPeriod));
 		},
-		hoursPerDay || DEFAULT_HOUR_PERIOD_PER_DAY
+		hoursPerDay
 	);
 
 	return context;

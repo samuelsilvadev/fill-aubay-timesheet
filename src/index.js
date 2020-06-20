@@ -5,8 +5,15 @@ const { argv } = require('yargs');
 const steps = require('./steps');
 const logger = require('./utils/logger');
 
+const DEFAULT_HOUR_PERIOD_PER_DAY = 8;
+
 (() => {
-	const { user, pass, hoursPerDay } = argv;
+	const {
+		user,
+		pass,
+		hoursPerDay = DEFAULT_HOUR_PERIOD_PER_DAY,
+		testing = false,
+	} = argv;
 
 	logger().warn("\nWelcome, let's begin!");
 
@@ -36,7 +43,7 @@ const logger = require('./utils/logger');
 
 					process.exit(0);
 				});
-		}, Promise.resolve({ user, pass, hoursPerDay }))
+		}, Promise.resolve({ user, pass, hoursPerDay, testing }))
 		.then(() => {
 			logger().success(
 				`\nIt seems everything went alright, see you next time :D`

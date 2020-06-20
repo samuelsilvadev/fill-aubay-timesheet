@@ -8,7 +8,6 @@ const VISIBLE_ON_ADD_NEW_TIMESHEET_IDENTIFIER =
 module.exports = async function addOrEditTimesheet(context) {
 	const { currentMonthIndex, lastSubmittedMonthIndex, page } = context;
 
-	// click in ADD a new timesheet or EDIT the last one.
 	if (currentMonthIndex !== lastSubmittedMonthIndex) {
 		await page.click(ADD_TIMESHEET_LINK_IDENTIFIER);
 	} else {

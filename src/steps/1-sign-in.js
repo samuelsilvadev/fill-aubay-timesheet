@@ -15,10 +15,10 @@ const PASSWORD_TAG_IDENTIFIER = '#Password';
 const SUBMIT_BUTTON_TAG_IDENTIFIER = 'input[type="submit"]';
 
 module.exports = async function openAndSignIn(context) {
-	const { user, pass } = context;
+	const { user, pass, testing } = context;
 
 	const browser = await puppeteer.launch({
-		headless: !isDevelopment,
+		headless: !testing && !isDevelopment,
 	});
 
 	const page = await browser.newPage();
