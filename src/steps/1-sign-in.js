@@ -6,6 +6,8 @@ const {
 	YEAR_SELECT_IDENTIFIER,
 } = require('./shared-selectors');
 
+const { isDevelopment } = require('../utils/runtime');
+
 const START_UP_URL = 'https://rm.aubay.pt/Account/Login?ReturnUrl=%2f';
 
 const USERNAME_TAG_IDENTIFIER = '#Username';
@@ -15,7 +17,10 @@ const SUBMIT_BUTTON_TAG_IDENTIFIER = 'input[type="submit"]';
 module.exports = async function openAndSignIn(context) {
 	const { user, pass } = context;
 
-	const browser = await puppeteer.launch({ headless: false });
+	const browser = await puppeteer.launch({
+		headless: !isDevelopment,
+	});
+
 	const page = await browser.newPage();
 
 	await page.goto(START_UP_URL);
