@@ -1,3 +1,5 @@
+# Fill my Timesheet for me 🕐
+
 Lightweight CLI for fill up a specific timesheet from my current company.
 
 <hr>
@@ -29,6 +31,12 @@ and then run
 fill-aubay-timesheet --user=your-user --pass=your-pass
 
 ```
+
+### Flags
+
+-   `--user`: your personal username to sign in on Aubay's application.
+-   `--pass`: your personal password to sign in on Aubay's application.
+-   `--hours-per-day`: if you want to change the default value, which is _8_.
 
 ## License
 

@@ -6,7 +6,7 @@ const steps = require('./steps');
 const logger = require('./utils/logger');
 
 (() => {
-	const { user, pass } = argv;
+	const { user, pass, hoursPerDay } = argv;
 
 	logger().warn("\nWelcome, let's begin!");
 
@@ -36,7 +36,7 @@ const logger = require('./utils/logger');
 
 					process.exit(0);
 				});
-		}, Promise.resolve({ user, pass }))
+		}, Promise.resolve({ user, pass, hoursPerDay }))
 		.then(() => {
 			logger().success(
 				`\nIt seems everything went alright, see you next time :D`
