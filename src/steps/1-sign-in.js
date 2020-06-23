@@ -21,7 +21,8 @@ module.exports = async function openAndSignIn(context) {
 		headless: !testing && !isDevelopment,
 	});
 
-	const page = await browser.newPage();
+	const incognitoContext = await browser.createIncognitoBrowserContext();
+	const page = await incognitoContext.newPage();
 
 	await page.goto(START_UP_URL);
 
@@ -32,6 +33,8 @@ module.exports = async function openAndSignIn(context) {
 	await page.keyboard.type(process.env.PASSWORD || `${pass}`);
 
 	await page.click(SUBMIT_BUTTON_TAG_IDENTIFIER);
+
+	await page.waitFor(500);
 
 	await page.waitForSelector(YEAR_SELECT_IDENTIFIER);
 	await page.waitForSelector(MONTH_SELECT_IDENTIFIER);
